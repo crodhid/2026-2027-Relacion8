@@ -23,17 +23,7 @@ function cuerpo()
 {
 ?>
     <br><br>
-    <a href="./aplicacion/relacion1/index.php">Relacion 1</a>
-    <br>
-    <a href="./aplicacion/relacion2/index.php">Relacion 2</a>
-    <br>
-    <a href="./aplicacion/relacion3/index.php">Relacion 3</a>
-    <br>
-    <a href="./aplicacion/relacion4/index.php">Relacion 4</a>
-    <br>
-    <a href="./aplicacion/relacion5/index.php">Relacion 5</a>
-    <br>
-    <a href="./aplicacion/relacion7/index.php">Relacion 7</a>
-
+    <a href="aplicacion/plantilla/personalizar/personalizar.php">Personalizar</a>
+    <a href="aplicacion/plantilla/personalizar/index.php">Principal</a>
 <?php
 }
