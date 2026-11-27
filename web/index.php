@@ -23,7 +23,6 @@ function cuerpo()
 {
 ?>
     <br><br>
-    <a href="aplicacion/plantilla/personalizar/personalizar.php">Personalizar</a>
-    <a href="aplicacion/plantilla/personalizar/index.php">Principal</a>
+    <h1>Inicio</h1>
 <?php
 }

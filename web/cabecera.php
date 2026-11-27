@@ -10,15 +10,22 @@ else
     error_reporting(E_ALL);
 
 spl_autoload_register(function ($clase) {
-    $ruta = RUTABASE . "/scripts/clases/";
-    $fichero = $ruta . "$clase.php";
+    $carpetas = [
+        RUTABASE . "/scripts/clases/",
+        RUTABASE . "/aplicacion/clases/",
+    ];
 
-    if (file_exists($fichero)) {
-        require_once($fichero);
-    } else {
-        throw new Exception("La clase $clase no se ha encontrado.");
+    foreach ($carpetas as $carpeta) {
+        $fichero = $carpeta . "$clase.php";
+        if (file_exists($fichero)) {
+            require_once($fichero);
+            return;
+        }
     }
 });
+
+//Para empezar con las sesiones (después de registrar la autocarga)
+session_start();
 
 include(RUTABASE . "/aplicacion/plantilla/plantilla.php");
 include(RUTABASE . "/scripts/librerias/Validacion.php");
